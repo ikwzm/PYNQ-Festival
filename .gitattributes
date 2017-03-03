@@ -1,0 +1,5 @@
+target/zynq-pynqz1/boot/design_1_wrapper.bit filter=lfs diff=lfs merge=lfs -text
+target/zynq-pynqz1/boot/zImage-4.8.17-armv7-fpga filter=lfs diff=lfs merge=lfs -text
+target/zynq-pynqz1/boot/boot.bin filter=lfs diff=lfs merge=lfs -text
+target/zynq-pynqz1/boot/u-boot.img filter=lfs diff=lfs merge=lfs -text
+debian8-rootfs-4.8.17.tgz filter=lfs diff=lfs merge=lfs -text
