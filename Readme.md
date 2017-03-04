@@ -28,6 +28,11 @@ This Repository provides a Linux Boot Image(U-boot, Kernel, Root-fs) examples fo
   + installed python3 pip3
   + installed Jupyter Notebook
 
+### Slide
+
+[python で FPGA プログラミング](doc/PYNQ祭り資料.pdf)
+
+
 Install
 ------------------------------------------------------------------------------------
 
