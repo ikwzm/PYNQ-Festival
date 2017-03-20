@@ -77,6 +77,25 @@ shell# umount mnt/usb1
 shell# umount mnt/usb2
 ````
 
+### Boot PYNQ-Z1 and login fpga or root user
+
+fpga'password is "fpga".
+
+```
+debian-fpga login: fpga
+Password:
+fpga@debian-fpga:~$
+```
+
+root'password is "admin".
+
+```
+debian-fpga login: root
+Password:
+root@debian-fpga:~#
+```
+
+
 Build 
 ------------------------------------------------------------------------------------
 
