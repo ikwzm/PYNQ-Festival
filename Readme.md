@@ -199,5 +199,5 @@ Build
 
 * [Build U-boot for PYNQ-Z1](doc/build/u-boot-zynq-pynqz1.md)
 * [Build Linux Kernel](doc/build/linux-kernel-4.8.17.md)
+* [Build Device Drivers and Services](doc/build/device-drivers.md)
 * [Build Debian8 RootFS](doc/build/debian-rootfs-4.8.17.md)
-
