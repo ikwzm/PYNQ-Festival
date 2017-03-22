@@ -197,7 +197,7 @@ fpga@debian-fpga:~$ python3 fibnacci_client.py
 Build 
 ------------------------------------------------------------------------------------
 
-* [Build U-boot for PYNQ-Z1 - Reference https://github.com/ikwzm/FPGA-SoC-Linux](https://github.com/ikwzm/FPGA-SoC-Linux/tree/master/doc/build/u-boot-zynq-pynqz1.md)
+* [Build U-boot for PYNQ-Z1](doc/build/u-boot-zynq-pynqz1.md)
 * [Build Linux Kernel - Reference https://github.com/ikwzm/FPGA-SoC-Linux](https://github.com/ikwzm/FPGA-SoC-Linux/tree/master/doc/build/linux-kernel-4.8.17.md)
 * [Build Debian8 RootFS](doc/build/debian-rootfs-4.8.17.md)
 
