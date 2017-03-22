@@ -30,12 +30,12 @@ This Repository provides a Linux Boot Image(U-boot, Kernel, Root-fs) examples fo
 
 ### Slide
 
-[python で FPGA プログラミング](doc/PYNQ祭り資料.pdf)
+* [python で FPGA プログラミング](doc/PYNQ祭り資料.pdf)
 
 Install
 ------------------------------------------------------------------------------------
 
-[Install to PYNQ-Z1](doc/install/zynq-pynqz1.md)
+* [Install to PYNQ-Z1](doc/install/zynq-pynqz1.md)
 
 Get started 
 ------------------------------------------------------------------------------------

@@ -1,18 +1,22 @@
-### fibonacci
+ fibonacci
+===================================================
 
 - [https://github.com/ikwzm/msgpack-vhdl-examples](https://github.com/ikwzm/msgpack-vhdl-examples)
 - [https://github.com/ikwzm/msgpack-vhdl-examples/tree/master/examples/fibonacci](https://github.com/ikwzm/msgpack-vhdl-examples/tree/master/examples/fibonacci)
 
-### File Description
+File Description
+------------------------------------------------------------------------------------
 
  * examples/fibonacci
    + zptty0-zynq-zybo.dts    : device tree overlay source for zptty
    + design_1_wrapper.bit    : fibonacci server for PYNQ-Z1
-   + fibnacci_client.py      : fibonacci client script
+   + fibonacci_client.py     : fibonacci client python script
+   + fibonacci_client.ipynb  : fibonacci client jupyter notebook file
 
-### Start Fibonacci Server
+Start Fibonacci Server
+------------------------------------------------------------------------------------
 
-#### Login root
+### Login root
 
 root'password is "admin".
 
@@ -22,7 +26,7 @@ Password:
 root@debian-fpga:~#
 ```
 
-#### Download "design_1_wrapper.bit" to PL
+### Download "design_1_wrapper.bit" to PL
 
 ```
 root@debian-fpga:~# echo 1 >/sys/class/fpgacfg/fpgacfg0/data_format
@@ -33,7 +37,7 @@ root@debian-fpga:~# dd if=/home/fpga/examples/fibonacci/design_1_wrapper.bit of=
 4045676 bytes (4.0 MB) copied, 0.296939 s, 13.6 MB/s
 ```
 
-#### Overlay "zptty" device-tree
+### Overlay "zptty" device-tree
 
 ```
 root@debian-fpga:~# dtbocfg.rb --install zptty0 --dts /home/fpga/examples/fibonacci/zptty0-zynq-zybo.dts
@@ -50,7 +54,7 @@ root@debian-fpga:~# dtbocfg.rb --install zptty0 --dts /home/fpga/examples/fibona
 [ 9913.686326] zptty 43c10000.zptty: rx buf size    = 128
 ```
 
-#### Start "socat" (background)
+### Start "socat" (background)
 
 ```
 root@debian-fpga:~# socat -d -d tcp-listen:54321,fork /dev/zptty0,raw,nonblock,echo=0 &
@@ -58,9 +62,10 @@ root@debian-fpga:~# socat -d -d tcp-listen:54321,fork /dev/zptty0,raw,nonblock,e
 2017/03/01 09:34:13 socat[2145] N listening on AF=2 0.0.0.0:54321
 ```
 
-### Run fibonacci client
+Run fibonacci client script
+------------------------------------------------------------------------------------
 
-#### Login fpga
+### Login fpga
 
 fpga'password is "fpga".
 
@@ -70,11 +75,11 @@ Password:
 fpga@debian-fpga:~$
 ```
 
-#### Run fibnacci_client.py
+### Run fibnacci_client.py
 
 ```
 fpga@debian-fpga:~$ cd /home/fpga/examples/fibonacci
-fpga@debian-fpga:~$ python3 fibnacci_client.py
+fpga@debian-fpga:~$ python3 fibonacci_client.py
 0 => 0
 1 => 1
 2 => 1
@@ -121,3 +126,22 @@ fpga@debian-fpga:~$ python3 fibnacci_client.py
 43 => 433494437
 ```
 
+Run fibonacci client on Juptyer Notebook
+------------------------------------------------------------------------------------
+
+### Connect PYNQ-Z1 to network.
+
+### Open URL from web browser.
+
+```http://<address or hostname>:8080```
+
+* hostname is "pynq".
+* address is the address assigned by DHCP.
+* port number is 8080.
+
+### Login fpga
+fpga'password is "fpga".
+
+### Open examples/fibonacci/fibonacci_client.ipynb
+
+### Cell > Run All
